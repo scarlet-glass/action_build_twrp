@@ -116,7 +116,7 @@ jobs:
         tree ./device
         export ALLOW_MISSING_DEPENDENCIES=true
         source build/envsetup.sh
-        lunch ${{ steps.var.outputs.device_code }}-eng 
+        lunch ${{ steps.var.outputs.device_code }}-userdebug
         make clean
         make recoveryimage -j$(nproc --all)
         
@@ -128,7 +128,7 @@ jobs:
         tree ./device
         export ALLOW_MISSING_DEPENDENCIES=true
         source build/envsetup.sh
-        lunch omni_${{ steps.var.outputs.device_code }}-eng 
+        lunch omni_${{ steps.var.outputs.device_code }}-userdebug 
         make clean
         make recoveryimage -j$(nproc --all)            
       
@@ -140,4 +140,4 @@ jobs:
         tag_name: ${{ github.run_id }}
         body: TWRP Recovery built by ${{ steps.var.outputs.git_username }}
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
