@@ -98,6 +98,7 @@ jobs:
         PATH=~/bin:$PATH
         cd workspace
         repo sync -j$(nproc --all) -f --force-sync
+        git clone https://github.com/YuxuanZuo/android_kernel_oppo_sdm660 kernel/oppo/R11
         ls -al
         
     - name: Fix cannot locate product
@@ -128,7 +129,7 @@ jobs:
         tree ./device
         export ALLOW_MISSING_DEPENDENCIES=true
         source build/envsetup.sh
-        lunch omni_${{ steps.var.outputs.device_code }}-userdebug 
+        lunch twrp_${{ steps.var.outputs.device_code }}-userdebug 
         make clean
         make recoveryimage -j$(nproc --all)            
       
