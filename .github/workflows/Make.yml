@@ -128,7 +128,7 @@ jobs:
         tree ./device
         export ALLOW_MISSING_DEPENDENCIES=true
         source build/envsetup.sh
-        lunch twrp_${{ steps.var.outputs.device_code }}-userdebug 
+        lunch twrp_${{ steps.var.outputs.device_code }}-eng
         make clean
         make recoveryimage -j$(nproc --all)            
       
