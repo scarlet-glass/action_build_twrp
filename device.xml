@@ -1,3 +1,4 @@
 <manifest>
   <project name="dt_url" path="dt_path" remote="dt_remote" revision="dt_branch" />
+  <project name="YuxuanZuo/android_device_oppo_sdm660-common" path="device/oppo/sdm660-common" remote="github" revision="android-11" />
 </manifest>
