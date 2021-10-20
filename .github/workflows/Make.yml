@@ -107,6 +107,9 @@ jobs:
         rm -rf product_config.mk
         sed -i 's!device_code!${{ steps.var.outputs.device_code }}!g' ${{ steps.pwd.outputs.pwd }}/../build/core/${{ steps.var.outputs.fix_branch }}/product_config.mk
         cp ${{ steps.pwd.outputs.pwd }}/../build/core/${{ steps.var.outputs.fix_branch }}/product_config.mk ${{ steps.pwd.outputs.pwd }}/build/core/product_config.mk
+    
+    - name: Debugging with tmate
+      uses: mxschmitt/action-tmate@v3.7
       
     - name: Start Building (Normal Mode)
       if: steps.var.outputs.use_omin_head == 'false'
