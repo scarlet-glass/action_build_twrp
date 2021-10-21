@@ -130,28 +130,11 @@ jobs:
         source build/envsetup.sh
         lunch twrp_${{ steps.var.outputs.device_code }}-eng
         make clean
-        make libandroidicu -j$(nproc --all)
-        make libbinderdebug -j$(nproc --all)
-        
-    - name: Start SSH via ngrok
-      uses: P3TERX/ssh2actions@main
-      with:
-          mode: ngrok
-      env:
-          # After sign up on the https://ngrok.com
-          # You can find this token here: https://dashboard.ngrok.com/auth/your-authtoken
-          NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
-           
-          # ngrok server region [us, eu, au, ap, sa, jp, in] (optional, default: us)
-          # You can find this server region here: https://ngrok.com/docs#global-locations
-          NGROK_REGION: jp
-              
-          # This password you will use when authorizing via SSH
-          SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
+        m recoveryimage -j$(nproc --all)
           
     - name: Pack out files
       run: |
-        tar -cjf out.tar.bz2 workspace/out/
+        tar -cjf out.tar.bz2 workspace/out/target/product
          
     - name: Upload File to Release
       uses: softprops/action-gh-release@v1
