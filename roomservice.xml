@@ -1,3 +1,7 @@
 <manifest>
+  <project name="YuxuanZuo/android_device_oppo_R11" path="device/oppo/R11" remote="github" revision="android-11" />
+  <project name="YuxuanZuo/android_device_oppo_R11s" path="device/oppo/R11s" remote="github" revision="android-11" />
   <project name="YuxuanZuo/android_device_oppo_sdm660-common" path="device/oppo/sdm660-common" remote="github" revision="android-11" />
+  <project name="android_vendor_qcom_opensource_cryptfs_hw" path="vendor/qcom/opensource/cryptfs_hw" remote="LineageOS" revision="lineage-18.0" />
+  <project name="android_vendor_qcom_opensource_interfaces" path="vendor/qcom/opensource/interfaces" remote="LineageOS" revision="lineage-18.1" />
 </manifest>
