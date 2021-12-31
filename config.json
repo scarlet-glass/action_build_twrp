@@ -1,18 +1,18 @@
 {
   "twrp_url": "git://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git",
   "twrp_branch": "twrp-11",
-  "git_username": "YuxuanZuo",
-  "git_email": "35165992+YuxuanZuo@users.noreply.github.com",
+  "git_username": "scarlet-glass",
+  "git_email": "12830544+scarlet-glass@users.noreply.github.com",
   "use_own_dt": true,
-  "dt_url": "YuxuanZuo/android_device_oppo_R11",
+  "dt_url": "scarlet-glass/twrp_device_xiaomi_apollo",
   "dt_branch": "android-11",
   "dt_remote": "github",
-  "dt_path": "device/oppo/R11",
-  "device_code": "R11",
+  "dt_path": "device/xiaomi/apollo",
+  "device_code": "apollo",
   "use_omin_head": true,
   "use_repair_manifest": false,
   "fix_product": false,
   "fix_misscom": false,
   "fix_busybox": false,
-  "fix_branch": "android-10.0"
+  "fix_branch": "android-11.0"
 }
